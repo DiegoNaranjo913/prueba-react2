@@ -34,11 +34,13 @@ export default function Form() {
     const fadeOut = (elem) => {
         let newValue = 1;
         elem.style.opacity = 1;
+        elem.style.display = "block";
         let fadeOutInterval = setInterval(function () {
             if (newValue > 0) {
                 newValue -= 0.2;
             } else if (newValue < 0) {
                 elem.style.opacity = 0;
+                elem.style.display = "none";
                 clearInterval(fadeOutInterval);
             }
 
