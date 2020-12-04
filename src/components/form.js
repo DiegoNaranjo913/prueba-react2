@@ -64,7 +64,7 @@ export default function Form() {
                             register({
                                 required: "El campo nombre no debe ir vacío.",
                                 pattern: {
-                                    value: /^[\u00F1A-Za-z _]*[\u00F1A-Za-z][\u00F1A-Za-z _]*$/,
+                                    value: /^[A-Za-zÁÉÍÓÚáéíóúñÑ ]+$/g,
                                     message: "El nombre digitado no es valido."
                                 }
                             })
